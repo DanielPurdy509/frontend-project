@@ -10,6 +10,7 @@ body {
 #launch-list {
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: 20px;
     border-radius: 50px;
     background-color: orange;
     display: flex;
@@ -33,33 +34,35 @@ body {
     justify-content:center;
     margin-top: 10px;
     opacity:100;
+
+    /* visibility: hidden; */
 }
 
 #launch-info {
-    width: 200px;
+    /* width: 200px; */
     align-content: center;
-    text-align: center;
-    margin-top: 10px;
+    text-align:center;
+    /* text-justify: distribute; */
 }
 
 .launch-card {
     font-family: sans-serif;
     font-size: large;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    align-content: center;
+    justify-items: center;
     margin-bottom: 10px;
-    padding: 200px;
+    padding: 20px;
     border-radius: 50px;
     background-color: white;
-    width: 100px;
-    height: 500px;
+    width: 450px;
+    height: 700px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .launch-title {
-    margin-top: 10px;
-    background-color: red;
+    flex: auto;
 } 

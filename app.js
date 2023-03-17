@@ -15,7 +15,7 @@ $.get(`https://ll.thespacedevs.com/2.2.0/launch/`, (data) => {
         let launchImg = document.createElement("img");
         launchImg.setAttribute("id","launch-image");
         launchImg.src = data.results[i].image;
-        launchImg.onerror = function() {launchImg.src = "no-image-available-md.png"};
+        launchImg.onerror = function() {launchImg.src = "no_image_available.png"};
 
         getLaunchInfo(launch, i);
 
@@ -35,20 +35,20 @@ function getLaunchInfo(launch, i) {
     let launchInfo = document.createElement("div");
         launchInfo.setAttribute("id","launch-info")
 
-    let launchOrg = document.createElement("div");
+    let launchOrg = document.createElement("p");
         launchOrg.innerHTML = `Organization: ${data.results[i].launch_service_provider.name}`;
         launchInfo.append(launchOrg);
 
-    let launchDate = document.createElement("div");
+    let launchDate = document.createElement("p");
         let date = data.results[i].window_start.substring(0,9);
         launchDate.innerHTML = `Launch Date: ${date}`;
         launchInfo.append(launchDate);
 
-    let launchMission = document.createElement("div");
+    let launchMission = document.createElement("p");
         launchMission.innerHTML = `Mission Description: ${data.results[i].mission.description}`;
         launchInfo.append(launchMission);
 
-    let launchStatus = document.createElement("div");
+    let launchStatus = document.createElement("p");
         launchStatus.innerHTML = `Mission Outcome: ${data.results[i].status.name}. ${data.results[i].status.description}`;
         launchInfo.append(launchStatus);
 
